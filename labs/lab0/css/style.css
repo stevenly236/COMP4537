@@ -1,0 +1,31 @@
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.input-container {
+    margin: 10px 0;
+}
+
+#gameArea {
+    margin-top: 20px;
+    position: relative;
+    min-height: 200px;
+}
+
+.game-button {
+    position: absolute;
+    height: 5em;
+    width: 10em;
+    cursor: pointer;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+#message {
+    margin-top: 20px;
+    font-weight: bold;
+}
