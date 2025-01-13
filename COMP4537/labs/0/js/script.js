@@ -1,3 +1,4 @@
+document.getElementById('labelText').textContent = MESSAGES.LABEL_TEXT;
 class Button {
     constructor(number, color) {
         this.number = number;
@@ -7,7 +8,7 @@ class Button {
 
     create() {
         const button = document.createElement('button');
-        button.className = 'game-button';
+        button.className = 'button';
         button.style.backgroundColor = this.color;
         button.textContent = this.number;
         this.element = button;
@@ -37,8 +38,9 @@ class GameBoard {
 
     createButtons(count) {
         this.clear();
-    
-        const buttonWidth = 10 * 16; 
+        
+        const buttonWidth = 10 * 16;
+        const spacing = 40; 
         
         for (let i = 0; i < count; i++) {
             const randomColor = this.getRandomColor();
@@ -48,9 +50,11 @@ class GameBoard {
             const element = button.create();
             this.gameArea.appendChild(element);
     
-            button.setPos(i * (buttonWidth + 10), 0); 
+            const xPosition = i * (buttonWidth + spacing);
+            button.setPos(xPosition, 0);
         }
     }
+    
     
     getRandomColor() {
         const letters = '0123456789ABCDEF';
@@ -78,8 +82,8 @@ class GameBoard {
             await new Promise(resolve => setTimeout(resolve, 2000));
             
             this.buttons.forEach(button => {
-                const x = Math.random() * (gameArea.width - buttonWidth);
-                const y = Math.random() * (gameArea.height - buttonHeight);
+                const x = Math.random() * (gameArea.width - buttonWidth - 10);
+                const y = Math.random() * (gameArea.height - buttonHeight - 10);
                 button.setPos(x, y);
             });
         }
@@ -120,11 +124,11 @@ class Game {
         
         this.gameBoard.buttons.forEach(button => {
             button.hideNumber();
-            button.element.addEventListener('click', () => this.handleButtonClick(button));
+            button.element.addEventListener('click', () => this.clickButton(button));
         });
     }
 
-    handleButtonClick(button) {
+    clickButton(button) {
         if (this.gameBoard.scrambling) return;
         
         const correctNumber = this.currentIndex + 1;
@@ -143,3 +147,5 @@ class Game {
 }
 
 new Game();
+
+// Used ChatGPT for help with this Assignment

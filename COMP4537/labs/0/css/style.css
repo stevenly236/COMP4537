@@ -10,10 +10,10 @@
 #gameArea {
     margin-top: 20px;
     position: relative;
-    min-height: 200px;
+    min-height: 500px;
 }
 
-.game-button {
+.button {
     position: absolute;
     height: 5em;
     width: 10em;
@@ -28,4 +28,8 @@
 #message {
     margin-top: 20px;
     font-weight: bold;
+}
+
+#buttonCount {
+    width: 180px; 
 }
