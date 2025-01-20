@@ -75,3 +75,5 @@ window.addEventListener('load', () => {
     loadNotes();
     setInterval(saveNotes, 2000);
 });
+
+// Used Chat-GPT to help with Lab 1
