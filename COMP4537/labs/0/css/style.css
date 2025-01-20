@@ -11,7 +11,13 @@
     margin-top: 20px;
     position: relative;
     min-height: 500px;
+    display: flex; /* Enable Flexbox */
+    flex-wrap: wrap; /* Allow buttons to wrap onto the next row */
+    gap: 10px; /* Add spacing between buttons */
+    align-items: center; /* Vertically align items in a row */
+    justify-content: flex-start; /* Align items to the left */
 }
+
 
 .button {
     position: absolute;

@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.noteContainer {
+    margin-bottom: 20px;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.noteArea {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.btn {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.add-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.remove-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.back-btn {
+    background-color: #555;
+    color: white;
+}

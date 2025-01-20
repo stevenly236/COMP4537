@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.notesContainer {
+    margin-bottom: 20px;
+}
+
+.note {
+    margin-bottom: 10px;
+}
+
+.noteArea {
+    width: 100%;
+    padding: 5px;
+}
+
+.btn {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.back-btn {
+    background-color: #555;
+    color: white;
+}

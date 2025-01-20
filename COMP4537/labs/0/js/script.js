@@ -73,13 +73,14 @@ class GameBoard {
 
     async scrambleButtons(times) {
         this.scrambling= true;
-        const gameArea = this.gameArea.getBoundingClientRect();
-        const buttonRect = this.buttons[0].element.getBoundingClientRect();
-        const buttonWidth = buttonRect.width;
-        const buttonHeight = buttonRect.height;
 
         for (let i = 0; i < times; i++) {
             await new Promise(resolve => setTimeout(resolve, 2000));
+
+            const gameArea = this.gameArea.getBoundingClientRect();
+            const buttonRect = this.buttons[0].element.getBoundingClientRect();
+            const buttonWidth = buttonRect.width;
+            const buttonHeight = buttonRect.height;
             
             this.buttons.forEach(button => {
                 const x = Math.random() * (gameArea.width - buttonWidth - 10);
