@@ -1,4 +1,4 @@
-export const clientMessages = {
+const clientMessages = {
     ERROR_INVALID_QUERY: 'Error: Only SELECT and INSERT queries are allowed',
     ERROR_NETWORK: 'Error: Network error occurred. Please try again.',
     ERROR_SERVER: 'Error: Server error occurred. Please try again.',
@@ -17,3 +17,5 @@ export const clientMessages = {
     LOADING_INSERT: 'Inserting sample data...',
     LOADING_QUERY: 'Executing query...'
 };
+
+export default clientMessages
