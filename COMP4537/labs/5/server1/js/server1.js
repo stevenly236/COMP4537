@@ -1,4 +1,4 @@
-import { clientMessages } from '../lang/messages/en/user.js';
+import { clientMessages } from '../../lang/messages/en/user.js'; 
 
 export class DatabaseInterface {
     constructor() {
