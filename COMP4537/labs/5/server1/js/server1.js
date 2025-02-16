@@ -1,6 +1,6 @@
 import { clientMessages } from './lang/messages/en/user.js';
 
-class DatabaseInterface {
+export class DatabaseInterface {
     constructor() {
         this.SERVER_URL = 'https://shark-app-wkh5r.ondigitalocean.app/';
         this.initializeUI();
@@ -82,4 +82,5 @@ class DatabaseInterface {
     }
 }
 
-new DatabaseInterface();
+const instance = new DatabaseInterface();
+export default instance;
