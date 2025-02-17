@@ -26,7 +26,7 @@ export class DatabaseInterface {
         responseElement.textContent = clientMessages.LOADING_INSERT;
 
         try {
-            const response = await fetch(`${this.SERVER_URL}/insert`, {
+            const response = await fetch(`${this.SERVER_URL.replace(/\/$/, '')}/insert`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ export class DatabaseInterface {
 
         try {
             const method = isSelect ? 'GET' : 'POST';
-            const url = `${this.SERVER_URL}/query${isSelect ? '?' + new URLSearchParams({query}) : ''}`;
+            const url = `${this.SERVER_URL.replace(/\/$/, '')}/query${isSelect ? '?' + new URLSearchParams({query}) : ''}`;
             
             const response = await fetch(url, {
                 method,
