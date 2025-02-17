@@ -2,7 +2,7 @@ import clientMessages from '../lang/messages/en/user.js';
 
 export class DatabaseInterface {
     constructor() {
-        this.SERVER_URL = 'https://shark-app-wkh5r.ondigitalocean.app/';
+        this.SERVER_URL = 'https://shark-app-wkh5r.ondigitalocean.app';
         this.initializeUI();
         this.initializeEventListeners();
     }
